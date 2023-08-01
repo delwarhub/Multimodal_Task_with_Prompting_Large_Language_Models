@@ -125,7 +125,7 @@ python3 main.py
 
 ``` Note: Please install salesforce-lavis separately, due to some issues with environment configuration we were not able to install it locally.```
 
-##Tasks
+## Tasks
 1.	Pick one of the following multimodal tasks: VQA-X, E-SNLI-VE, A-OKVQA, VCR
 2.	Select 100 samples from any split of the dataset (distributed equally across class labels, when possible)
 3.	Use image captioning to obtain textual representations for visual content (BLIP-2 or Instruct-BLIP for captioning)
