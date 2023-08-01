@@ -1,0 +1,28 @@
+DOWNLOAD_DATA: True # True or False
+DATA_TYPES: 
+    - "questions"
+    - "annotations"
+    - "images"
+# only considering the validation data
+DATA_TYPE_URLS:
+    - "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Questions_Val_mscoco.zip"
+    - "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Annotations_Val_mscoco.zip"
+    - "http://images.cocodataset.org/zips/val2014.zip"
+PATH_TO_QUESTIONS_DIR: "./data/Questions/"
+PATH_TO_VALIDATION_QUESTIONS: "./data/Questions/v2_OpenEnded_mscoco_val2014_questions.json"
+PATH_TO_ANNOTATIONS_DIR: "./data/Annotations/"
+PATH_TO_VALIDATION_ANNOTATIONS: "./data/Annotations/v2_mscoco_val2014_annotations.json"
+PATH_TO_IMAGES_DIR: "./data/Images/"
+PATH_TO_VALIDATION_IMAGES: "./data/Images/val2014/"
+PATH_TO_EXPLANATIONS_DIR: "./data/textual/"
+PATH_TO_VALIDATION_EXPLANATIONS: "./data/textual/val_exp_anno.json"
+
+PREPROCESS_DATA: True # True or False
+PATH_TO_PREPROCESSED_DATA: "./data/vqa_x_data.csv"
+PATH_TO_SAMPLED_PREPROCESSED_DATA: "./data/vqa_x_sampled_data.csv"
+
+PREDICT_AND_EXPLAIN: True # True or False
+blip2_architecture: "blip2_t5"
+blip2_model_type: "caption_coco_flant5xl" 
+PATH_TO_SAMPLED_PREPROCESSED_DATA_W_CAPTIONS: "vqa_x_sampled_data_w_captions.csv"
+PATH_TO_SAMPLED_PREPROCESSED_DATA_FINAL: "vqa_x_sampled_data_final.csv"
